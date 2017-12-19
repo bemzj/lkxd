@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable"/>
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	    <meta content="telephone=no" name="format-detection"/>
+		<title>h5游戏</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+		<script type="text/javascript" src="js/lufylegend-1.10.1.min.js" ></script>
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/swiper-3.4.2.min.js" ></script>
+		<script type="text/javascript" src="js/rem.js" ></script>
+		<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<!--加载页面-->
+		<div id="load">
+			<img src="img/load.png" />
+			<p>0%</p>
+			<img src="img/email.png" class="emailLoad"/>
+		</div>
+		<!-- Swiper -->
+	    <div class="swiper-container" style="opacity: 0;">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide">
+	            	<div class="p p1">
+	            		<div class="text1">
+	            			<p>从前船很慢<br/>，路很远<br/>，</p>
+	            			<p>一生只够爱一个人<br/>。</p>
+	            			<p>如今朋友多<br/>，话不多<br/>，</p>
+	            			<p>咫尺之间却只熟络于朋友圈<br/><span>...</span></p>
+	            		</div>
+	            		<div class="down">
+	            			<img src="img/down.png" />
+	            		</div>
+	            		<p class="downp">向下滑</p>
+	            	</div>
+	            </div>
+	            <div class="swiper-slide">
+	            	<div class="p p2">
+	            		<div class="text2">
+	            			<p>Whatever</p>
+	            			<p>我们又老了一岁<br/>,</p>
+	            			<p>很庆幸我们 依旧拥有彼此</p>
+	            			<p>在<br/>2<br/>0<br/>1<br/>7最后的日子里<br/>。</p>
+	            			<p>我想把那些平日里想说未说<br/>，</p>
+	            			<p>不敢说出<br/>，或许该说的话<br/>。</p>
+	            			<p>一股脑儿写下来<br/>，念给你听<br/>。</p>
+	            		</div>
+	            		<div class="down">
+	            			<img src="img/down.png" />
+	            		</div>
+	            		<p class="downp">向下滑</p>
+	            	</div>
+	            </div>
+	            <div class="swiper-slide">
+	            	<div id="game">
+	            		
+	            	</div>
+	            </div>
+	        </div>
+	    </div>
+	    <iframe id="input" src="input.html" name="input" style="display: none;"></iframe>
+	    <!--进来的页面-->
+	    <div id="rReads" class="rRead" style="display: none;">
+	    	<div class="pBox">
+	    		<p class="names">蜡笔小新：</p>
+	    		<p class="content">圣诞节快乐！2017年认识你是我最大的惊喜，周末去商业广场请你吃大餐，风雨无阻不见不散...</p>
+	    		<p class="little">小丸子</p>
+	    		<p class="date">2017/12/25</p>
+	    		<a href="###" class="lookm"><img src="img/lookMore.png" /></a>
+	    	</div>
+	    	<div class="video">
+	    		<div class="videoBox">
+	    			<img src="img/video.png" />
+	    			<img id="r11" src="img/red.png" />
+	    			<img id="r22" src="img/red.png" />
+	    			<input type="image" src="img/play.png" class="playing" />
+	    			<input type="image" src="img/stop.png" class="paused" />
+	    		</div>
+	    	</div>
+	    	<div class="readmore">
+	    		<input type="image" src="img/send.png" class="mail"/>
+	    	</div>
+	    </div>
+	    <!--预览的页面-->
+	    <div id="rBox"  style="display: none;">
+	    	<img src="img/letterDown.png" class="bottom" style="display: none;"/>
+	    	<div id="rRead" class="rRead">
+		    	<div class="pBox">
+		    		<p class="names">蜡笔小新：</p>
+		    		<p class="content hc">圣诞节快乐！2017年认识你是我最大的惊喜，周末去商业广场请你吃大餐，风雨无阻不见不散...</p>
+		    		<p class="little">小丸子</p>
+		    		<p class="date">2017/12/25</p>
+		    		<a href="###" id="lookm"><img src="img/lookMore.png"/></a>
+		    	</div>
+		    	<div class="video">
+		    		<div class="videoBox">
+		    			<img src="img/video.png" />
+		    			<img id="r1" src="img/red.png" />
+		    			<img id="r2" src="img/red.png" />
+		    			<input type="image" src="img/play.png" id="playing" />
+		    			<input type="image" src="img/stop.png" id="paused" />
+		    		</div>	
+		    	</div>
+		    	<div class="readmore">
+		    		<a href="###" class="reload"><img src="img/reLoad.png"/></a>
+		    		<a href="###" class="sends"><img src="img/sendEmail.png"/></a>
+		    		<div class="clearl"></div>
+		    	</div>
+		    </div>
+		    <div class="mengceng" style="display: none;"></div>
+		    <img src="img/letterOn.png" class="up" style="display: none;"/>
+		    <img  src="img/close.png" class="closeEmail" style="display: none;"/>
+	    </div>
+	    
+	    
+	    <div id="content"  style="display: none;">
+	    	<div class="hBox">
+	    		<img src="img/head.png" />	    		
+	    	</div>
+	    	<div class="pmBox">
+	    		<p class="n">蜡笔小新：</p>
+	    		<p class="c">圣诞节快乐！2017年认识你是我最大的惊喜，周末去商业广场请你吃大餐，风雨无阻不见不散...圣诞节快乐！2017年认识你是我最大的惊喜，周末去商业广场请你吃大餐，风雨无阻不见不散...圣诞节快乐！2017年认识你是我最大的惊喜，周末去商业广场请你吃大餐，风雨无阻不见不散...</p>
+	    		<p class="l">小丸子</p>
+	    		<p class="d">2017/12/25</p>
+	    	</div>
+	    	<div class="returnBtn">
+	    		<input type="image" src="img/return.png" />
+	    	</div>
+	    	<img src="img/emails.png"  class="emailred" />
+	    </div>
+	    <a href="###" id="music" isOpen="true">
+	    	<img src="img/music.png">
+	    	<img src="img/musicc.png" />
+	    </a>
+	    <audio id="press" preload  src="music/press.mp3" hidden="hidden"></audio >
+	    <!--录音-->
+	   	<audio id="sound" preload  src="music/press.mp3" hidden="hidden"></audio >
+		<audio id="bg" loop="loop" preload  src="http://m.gani.com.cn/activity/newProduct/music/bg.mp3" hidden="hidden"></audio >
+		<script type="text/javascript" src="js/swiper-3.4.2.min.js" ></script>
+		<script type="text/javascript" src="js/bemzjGame.js" ></script>
+		<script type="text/javascript" src="js/resource.js" ></script>
+		<script type="text/javascript" src="js/main.js" ></script>		
+		<script>
+			function audioAutoPlay(id,v){
+			    var audio = document.getElementById(id);
+			    audio.play();
+			    if(v==0)
+			    {
+			    	audio.pause();
+			    }
+			    document.addEventListener("WeixinJSBridgeReady", function () {
+			            audio.play();
+			            if(v==0)
+					    {
+					    	audio.pause();
+					    }
+			    }, false);
+			}
+//			audioAutoPlay('bg');
+			audioAutoPlay('press',0);
+			audioAutoPlay('sound',0);
+			
+		</script>
+	</body>
+</html>
