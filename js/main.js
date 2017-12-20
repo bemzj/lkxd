@@ -64,7 +64,15 @@ function first(){
 		LTweenLite.to(firstLayer,0.8,{alpha:0,onComplete:function(){
 			firstLayer.remove();
 		}});
-		second();
+		//如果存在就是合理的
+		var person = true;
+		if(person == true)
+		{
+			second();	
+		}else{
+			sendMail();
+		}
+		
 	});
 	//提示
 	var text1 = rBitmap(imgList['text1']);
@@ -93,6 +101,7 @@ function second(){
 	secondLayer.addChild(email);
 	
 	//text2	
+	//微信名
 	var names = "某某某";
 	var text2 = new setText(0,865,30,names+"给你读了一封信",'#1d1c22');
 	text2.x = rCenterWidth(text2);
@@ -136,14 +145,7 @@ function second(){
 	opens.addEventListener(LMouseEvent.MOUSE_DOWN,function(){
 		LTweenLite.to(secondLayer,1.0,{alpha:0});
 			$('#game').fadeOut(500);
-			//如果存在就是合理的
-			var person = true;
-			if(person == true)
-			{
-				elseSound();
-			}
-			
-			
+			elseSound();
 	})
 }
 //如果有个给你发语音的话就执行下面函数
@@ -157,6 +159,7 @@ function elseSound(){
 	var red10 = 52;
 	var red20 = 14;
 	//录音播放完成
+	$('.videoBox').addClass('animated tada');
 	document.getElementById("sound").onended = function() {
 		clearInterval(redTween0);
 		$('.paused').hide();
@@ -253,6 +256,7 @@ function sendMail(){
 		var red1 = 38;
 		var red2 = 12;
 		//老哥这里是录音内容
+		
 		//录音
 		$("#input").contents().find('#play').on('click',function(){
 			$(this).hide();
@@ -313,6 +317,8 @@ function sendMail(){
 			$(this).prev('#try').show();
 			clearInterval(redTween);
 		});
+		$("#input").contents().find('.videoBox').addClass('animated tada')
+		
 		//预览
 		$("#input").contents().find('.readMore input').on('click',function(){
 			clearInterval(redTween);
