@@ -216,18 +216,16 @@ input{
 }
 .readMore{
 	width: 100%;
-	margin:0 auto;
-	position: absolute;
-	bottom: 0.8rem;
+    margin: 0 auto;
+    margin-top: 1.0rem;
 }
 .readMore input{
 	width: 25.07%;
 	margin: 0 auto;
 }
 .video{
-	width: 100%;
-	position: absolute;
-	bottom: 2.2rem;
+    width: 100%;
+    margin-top: 1rem;
 }
 .videoBox{
 	width: 66.67%;
